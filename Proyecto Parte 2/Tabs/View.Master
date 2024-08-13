@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="View.Master.cs" Inherits="Proyecto_Parte_2.Tabs.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../css/menu.css" rel="stylesheet" />
+    <style>
+        /* Adjust the main content area */
+        #main {
+            margin-top: 0; /* Remove any top margin */
+            padding-top: 1px; /* Optionally add some padding for spacing */
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Navbar -->
+            <nav id="navbar">
+                <ul class="navbar-items flexbox-col">
+                    <li class="navbar-logo flexbox-left">
+                        <a class="navbar-item-inner flexbox" href="#">
+                           <img src="../Imagenes/logomenu.png" id="Layer 1" data-name="Layer 1" width="60" height="60" alt="Logo" />
+                        </a>
+                    </li>
+                    <li class="navbar-item flexbox-left">
+                        <a class="navbar-item-inner flexbox-left" href="log.aspx">
+                            <div class="navbar-item-inner-icon-wrapper flexbox">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </div>
+                            <span class="link-text">Identificarse</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item flexbox-left">
+                        <a class="navbar-item-inner flexbox-left" href="Matricula.aspx">
+                            <div class="navbar-item-inner-icon-wrapper flexbox">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </div>
+                            <span class="link-text">Matricular</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item flexbox-left">
+                        <a class="navbar-item-inner flexbox-left" href="pagos.aspx">
+                            <div class="navbar-item-inner-icon-wrapper flexbox">
+                                <ion-icon name="folder-open-outline"></ion-icon>
+                            </div>
+                            <span class="link-text">Pago</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item flexbox-left">
+                        <a class="navbar-item-inner flexbox-left" <a href="Resumen%20Matricula.aspx">
+                            <div class="navbar-item-inner-icon-wrapper flexbox">
+                                <ion-icon name="pie-chart-outline"></ion-icon>
+                            </div>
+                            <span class="link-text">Resumen Matrícula</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <main id="main" class="flexbox-col">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </form>
+</body>
+</html>
