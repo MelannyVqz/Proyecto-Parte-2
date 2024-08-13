@@ -33,7 +33,7 @@ namespace Proyecto_Parte_2.Tabs
             manejo_de_datos.InsertarDato("Respuesta", dic);
 
             respuesta_log.Text = "Accion Exitosa";
-            Response.Redirect("inicio.aspx");
+            Response.Redirect("Pagos.aspx");
 
             Response.AddHeader("REFRESH", "3;URL=pagos.aspx");
 

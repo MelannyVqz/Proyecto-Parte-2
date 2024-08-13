@@ -24,6 +24,24 @@ namespace Proyecto_Parte_2.Tabs
         protected global::System.Web.UI.WebControls.GridView GridViewresumen;
 
         /// <summary>
+        /// TCEDULA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TCEDULA;
+
+        /// <summary>
+        /// BBORRAR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BBORRAR;
+
+        /// <summary>
         /// Final control.
         /// </summary>
         /// <remarks>

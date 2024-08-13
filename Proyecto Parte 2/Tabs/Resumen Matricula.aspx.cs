@@ -1,6 +1,8 @@
 ﻿using Proyecto_Parte_2.Logica;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +28,12 @@ namespace Proyecto_Parte_2.Tabs
         {
             Response.Redirect("Log.aspx");
 
+        }
+        //BOTON QUE LLAMA A LA ACCION DE ELIMINAR 
+        protected void BBORRAR_Click(object sender, EventArgs e)
+        {
+            manejodatos.BorrarDato("Respuesta", "Cedula", TCEDULA.Text);
+            Response.Redirect("Resumen Matricula.aspx");
         }
     }
         

@@ -70,6 +70,29 @@ namespace Proyecto_Parte_2.Logica
                 }
             }
         }
+        public void LlenarGridDesdeSP(string cedula, GridView grid)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("ObtenerCedulas", con)) // Nombre del SP
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@cedula", cedula);
+
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            grid.DataSource = dt;
+                            grid.DataBind();
+                        }
+                    }
+                }
+            }
+        }
 
         public void LlenarDropDown(string query, DropDownList dropdown, string columna)
         {
